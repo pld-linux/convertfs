@@ -6,6 +6,7 @@ License:	GPL
 Group:		Applications/System
 Source0:	http://tzukanov.narod.ru/convertfs/%{name}-%{version}.tar.gz
 # Source0-md5:	10fcab200d3722f008274ed11fe643af
+Patch0:	%{name}-safety.patch
 URL:		http://tzukanov.narod.ru/convertfs/
 Requires:	util-linux
 Requires:	coreutils
@@ -28,6 +29,7 @@ read/write, and as long as primary filesystem supports sparse files.
 
 %prep
 %setup  -q -n %{name}
+%patch0 -p1
 
 %build
 sed -i -e 's#gcc#%{__cc}#g' Makefile
