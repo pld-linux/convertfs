@@ -32,7 +32,7 @@ read/write, and as long as primary filesystem supports sparse files.
 %description -l pl
 Ten prosty zestaw narzêdzi pozwala zmieniæ typ systemu plików w
 przypadku braku miejsca na kopiê zapasow±. Idea polega na
-wykorzystaniu obs³ugi rzadkich plik na g³ównym systemie plików.
+wykorzystaniu obs³ugi rzadkich plików na g³ównym systemie plików.
 Narzêdzie tworzy rzadki obraz urz±dzenia blokowego, przy u¿yciu mkfs
 robi na nim nowy system plików, montuje go, przy u¿yciu mv przenosi
 pliki z g³ównego systemu plików na podmontowany obraz, a nastêpnie
