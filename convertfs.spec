@@ -3,6 +3,7 @@ Summary(pl):	Narzêdzie pozwalaj±ce zmieniæ typ systemu plików bez miejsca na kop
 Name:		convertfs
 Version:	13jan2005
 Release:	1
+Epoch:		1
 License:	GPL
 Group:		Applications/System
 Source0:	http://tzukanov.narod.ru/convertfs/%{name}-%{version}.tar.gz
