@@ -1,12 +1,12 @@
 Summary:	Tool that allows you to change type of file system in the lack of backup space
 Summary(pl):	Narzêdzie pozwalaj±ce zmieniæ typ systemu plików bez miejsca na kopiê zapasow±
 Name:		convertfs
-Version:	18mar2002
+Version:	13jan2005
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://tzukanov.narod.ru/convertfs/%{name}-%{version}.tar.gz
-# Source0-md5:	10fcab200d3722f008274ed11fe643af
+# Source0-md5:	71e8065e321898e259a55c8cefdfd75d
 Patch0:		%{name}-safety.patch
 URL:		http://tzukanov.narod.ru/convertfs/
 BuildRequires:	sed >= 4.0

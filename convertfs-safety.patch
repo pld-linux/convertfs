@@ -1,18 +1,17 @@
-diff -ur convertfs-orig/contrib/convertfs convertfs/contrib/convertfs
---- convertfs-orig/contrib/convertfs	2002-03-18 09:15:15.000000000 -0700
-+++ convertfs/contrib/convertfs	2003-08-23 22:57:29.000000000 -0600
-@@ -119,13 +119,23 @@
+--- convertfs/contrib/convertfs.orig	2005-01-13 13:27:35.000000000 +0100
++++ convertfs/contrib/convertfs	2005-01-16 15:08:49.376275560 +0100
+@@ -120,13 +120,23 @@
  }
  
  error() {
-+	echo "Trying to clean up" 1>&2
++  echo "Trying to clean up" 1>&2
    umount $loopdev 2>/dev/null
    losetup -d $loopdev 2>/dev/null
    umount $dev 2>/dev/null
 -  rm -rf $tmp
-+	rmdir $fs1root
-+	rmdir $fs2root
-+	rmdir $tmp
++  rmdir $fs1root
++  rmdir $fs2root
++  rmdir $tmp
    exit 1
  }
  
@@ -26,7 +25,7 @@ diff -ur convertfs-orig/contrib/convertfs convertfs/contrib/convertfs
  # device to convert
  dev=$1
  # filesystem to convert from
-@@ -192,7 +202,7 @@
+@@ -193,7 +203,7 @@
  echo "== Creating clone of \`$from_fs_type' filesystem that's on \`$dev'. =="
  umount $dev 2>/dev/null
  mount -t $from_fs_type $dev $fs1root || error
@@ -35,15 +34,7 @@ diff -ur convertfs-orig/contrib/convertfs convertfs/contrib/convertfs
  
  echo "===== Creating destination \`$to_fs_type' filesystem. ====="
  umount $loopdev 2>/dev/null
-@@ -207,6 +217,7 @@
- 	   [ "x$file" != "x$fsindex_name" ] &&
- 	   [ "x$file" != "xlost+found" ] &&
- 	   [ "x$file" != "x$fssuper_name" ]; then
-+		 # FIXME: this needs work if $file's size is > free space
- 		mv -f $fs1root/$file $fs2root/ || error
- 	fi
- done
-@@ -216,17 +227,17 @@
+@@ -217,17 +227,17 @@
  losetup -d $loopdev 2>/dev/null
  
  echo "=== Preparing info for block relocation ==="
@@ -64,4 +55,3 @@ diff -ur convertfs-orig/contrib/convertfs convertfs/contrib/convertfs
 -echo "      $dev   /   $to_fs_type   defaults   1   1"
 +echo "      $dev   /mountpoint   $to_fs_type   defaults   1   1"
  
-Only in convertfs/contrib: convertfs~
