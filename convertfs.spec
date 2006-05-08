@@ -9,6 +9,7 @@ Group:		Applications/System
 Source0:	http://tzukanov.narod.ru/convertfs/%{name}-%{version}.tar.gz
 # Source0-md5:	71e8065e321898e259a55c8cefdfd75d
 Patch0:		%{name}-safety.patch
+Patch1:		%{name}-Makefile.patch
 URL:		http://tzukanov.narod.ru/convertfs/
 BuildRequires:	sed >= 4.0
 Requires:	util-linux
@@ -51,10 +52,11 @@ rzadkie.
 %prep
 %setup  -q -n %{name}
 %patch0 -p1
+%patch1 -p1
 
 %build
-sed -i -e 's#gcc#%{__cc}#g' Makefile
 %{__make} \
+	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags}"
 
 %install
