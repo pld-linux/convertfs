@@ -1,0 +1,19 @@
+--- convertfs./Makefile	2006-05-08 15:02:36.000000000 +0200
++++ convertfs/Makefile	2006-05-08 15:04:04.000000000 +0200
+@@ -4,13 +4,13 @@
+ 	sync
+ 
+ devclone: devclone.c
+-	gcc -o devclone devclone.c $(CFLAGS)
++	$(CC) -o devclone devclone.c $(CFLAGS)
+ 
+ devremap: devremap.c convertfs.h
+-	gcc -o devremap devremap.c $(CFLAGS)
++	$(CC) -o devremap devremap.c $(CFLAGS)
+ 
+ prepindex: prepindex.c convertfs.h
+-	gcc -o prepindex prepindex.c $(CFLAGS)
++	$(CC) -o prepindex prepindex.c $(CFLAGS)
+ 
+ clean:
+ 	rm -f *.o devclone devremap prepindex core
