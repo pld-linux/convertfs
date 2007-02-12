@@ -1,5 +1,5 @@
 Summary:	Tool that allows you to change type of file system in the lack of backup space
-Summary(pl):	Narzêdzie pozwalaj±ce zmieniæ typ systemu plików bez miejsca na kopiê zapasow±
+Summary(pl.UTF-8):   NarzÄ™dzie pozwalajÄ…ce zmieniÄ‡ typ systemu plikÃ³w bez miejsca na kopiÄ™ zapasowÄ…
 Name:		convertfs
 Version:	13jan2005
 Release:	1
@@ -31,22 +31,22 @@ You can convert from virtually any filesystem type to virtually any
 one as long as they are both block-oriented and supported by Linux for
 read/write, and as long as primary filesystem supports sparse files.
 
-%description -l pl
-Ten prosty zestaw narzêdzi pozwala zmieniæ typ systemu plików w
-przypadku braku miejsca na kopiê zapasow±. Idea polega na
-wykorzystaniu obs³ugi rzadkich plików na g³ównym systemie plików.
-Narzêdzie tworzy rzadki obraz urz±dzenia blokowego, przy u¿yciu mkfs
-robi na nim nowy system plików, montuje go, przy u¿yciu mv przenosi
-pliki z g³ównego systemu plików na podmontowany obraz, a nastêpnie
-mapuje obraz na urz±dzenie.
+%description -l pl.UTF-8
+Ten prosty zestaw narzÄ™dzi pozwala zmieniÄ‡ typ systemu plikÃ³w w
+przypadku braku miejsca na kopiÄ™ zapasowÄ…. Idea polega na
+wykorzystaniu obsÅ‚ugi rzadkich plikÃ³w na gÅ‚Ã³wnym systemie plikÃ³w.
+NarzÄ™dzie tworzy rzadki obraz urzÄ…dzenia blokowego, przy uÅ¼yciu mkfs
+robi na nim nowy system plikÃ³w, montuje go, przy uÅ¼yciu mv przenosi
+pliki z gÅ‚Ã³wnego systemu plikÃ³w na podmontowany obraz, a nastÄ™pnie
+mapuje obraz na urzÄ…dzenie.
 
-Narzêdzie do remapowania u¿ywa rodzaju kroniki, aby zapobiec
-uszkodzeniom w przypadku awarii zasilania. Narzêdzia s± pisane dla
+NarzÄ™dzie do remapowania uÅ¼ywa rodzaju kroniki, aby zapobiec
+uszkodzeniom w przypadku awarii zasilania. NarzÄ™dzia sÄ… pisane dla
 Linuksa 2.4, glibc 2.2, nowych wersji util-linux i fileutils.
 
-Mo¿na konwertowaæ z prawie ka¿dego typu systemu plików na prawie
-ka¿dy, o ile oba s± zorientowane blokowo oraz ich odczyt i zapis s±
-obs³ugiwane przez Linuksa, a g³ówny system plików obs³uguje pliki
+MoÅ¼na konwertowaÄ‡ z prawie kaÅ¼dego typu systemu plikÃ³w na prawie
+kaÅ¼dy, o ile oba sÄ… zorientowane blokowo oraz ich odczyt i zapis sÄ…
+obsÅ‚ugiwane przez Linuksa, a gÅ‚Ã³wny system plikÃ³w obsÅ‚uguje pliki
 rzadkie.
 
 %prep
