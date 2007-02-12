@@ -1,5 +1,5 @@
 Summary:	Tool that allows you to change type of file system in the lack of backup space
-Summary(pl.UTF-8):   Narzędzie pozwalające zmienić typ systemu plików bez miejsca na kopię zapasową
+Summary(pl.UTF-8):	Narzędzie pozwalające zmienić typ systemu plików bez miejsca na kopię zapasową
 Name:		convertfs
 Version:	13jan2005
 Release:	1
